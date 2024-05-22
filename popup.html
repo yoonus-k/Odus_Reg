@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" href="assets/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+
+  <body>
+    <div
+      class="container-fluid jumbotron jumbotron-fluid p-3 bg-dark text-white rounded-bottom-5"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-question-circle-fill"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"
+        />
+      </svg>
+      <div class="row pb-5">
+        <div class="col-8">
+          <h1>Odus Reg</h1>
+        </div>
+        <div class="col-4">
+          <img
+            src="assets/Ultra_transprent.png"
+            class="mx-auto d-block"
+            alt="logo"
+            width="80"
+            height="40"
+          />
+        </div>
+      </div>
+      <div class="check-mark">
+        <div class="check-icon">
+          <span class="icon-line line-tip"></span>
+          <span class="icon-line line-long"></span>
+          <div class="icon-circle"></div>
+          <div class="icon-fix"></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin: 16px 16px">
+      <div class="active">
+        <div class="time-section">
+          <div class="current-time row">
+            <h6 class="col-5">Current time:</h6>
+            <h6 id="time" class="col-5">00:00:00 AM</h6>
+          </div>
+          <div class="reg-time row">
+            <h6 class="col-5">reg time:</h6>
+            <input type="time" class="col-5 timer" step="2" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <section>
+              <input
+                maxlength="5"
+                type="text"
+                class="col-3 input form-control"
+                id="input1"
+              />
+              <input
+                maxlength="5"
+                type="text"
+                class="col-3 input form-control"
+                id="input2"
+              />
+              <input
+                maxlength="5"
+                type="text"
+                class="col-3 input form-control"
+                id="input3"
+              />
+              <input
+                maxlength="5"
+                type="text"
+                class="col-3 input form-control"
+                id="input4"
+              />
+              <input
+                maxlength="5"
+                type="text"
+                class="col-3 input form-control"
+                id="input5"
+              />
+              <input
+                maxlength="5"
+                type="text"
+                class="col-3 input form-control"
+                id="input6"
+              />
+              <input
+                maxlength="5"
+                type="text"
+                class="col-3 input form-control"
+                id="input7"
+              />
+              <input
+                maxlength="5"
+                type="text"
+                class="col-3 input form-control"
+                id="input8"
+              />
+            </section>
+          </div>
+          <div class="row buttons">
+            <div class="col-4">
+              <button type="submit" class="btn btn-primary submit">
+                Start
+              </button>
+            </div>
+            <div class="col-4">
+              <button type="submit" class="btn btn-secondary save">Save</button>
+            </div>
+            <div class="col-4">
+              <button type="submit" class="btn btn-danger clear">clear</button>
+            </div>
+            <!--  
+                    <div class="col">
+                    <button type="submit" class="btn btn-danger getStorage">get</button>
+                  </div>
+                  -->
+          </div>
+        </div>
+      </div>
+      <div class="notActive">
+        <h4 style="color: red">Go to Odus reg page and try agian !</h4>
+      </div>
+    </div>
+    <div class="time-left">
+      <div class="row disabled-time" id="time-left">
+        <h4 class="col-5">Time left:</h4>
+        <h4 class="col-5 time-left-timer">0000</h4>
+      </div>
+    </div>
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">How to use ?</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6>1. Make sure your internet ping is (&lt200ms)</h6>
+            <h6>
+              2. If you want to save crs numbers in the system, make sure to hit
+              save.
+            </h6>
+            <h6>
+              3. After clicking start button, do not close the extention untill
+              the registration is complete !
+            </h6>
+          </div>
+          <div class="modal-footer">© 2023, Ultra Tech, yoonus.dev</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- succes check mark -->
+    <script src="assets/popper.min.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
+
+    <script src="assets/popup.js"></script>
+    <script defer="defer" src="assets/validation.js"></script>
+    <script src="assets/time.js"></script>
+  </body>
+</html>

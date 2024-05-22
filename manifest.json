@@ -1,0 +1,23 @@
+{
+  "name": "Odus reg",
+  "description": "To reg courses via odus plus automaticaly",
+  "version": "1.0",
+  "manifest_version": 3,
+
+  "permissions": ["storage", "tabs"],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "assets/book-bookmark.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["assets/content-script.js"]
+    }
+  ],
+  "icons": {
+    "128": "assets/book-bookmark.png"
+  }
+}
